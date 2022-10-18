@@ -5,7 +5,7 @@ export function valida(input) {
     if (validadores[tipoDeInput]) {
         validadores[tipoDeInput](input);
     }
-    // console.log(input.parentElement);
+    console.log(input.parentElement);
 
     // Condicion para verificar si el validty del input es valido y de lo contrario mostrar el mensaje de error del input
     if (input.validity.valid) {
@@ -98,5 +98,7 @@ function mayorDeEdad(fecha) {
     fecha.getUTCFullYear() + 18, 
     fecha.getUTCMonth(), 
     fecha.getUTCDate());
+
     return diferenciaFechas <= fechaActual;
+
 };
